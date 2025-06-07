@@ -281,7 +281,7 @@ else:
             )
 
 
-n, k = map(int, input().split())
+n, k = list(map(int, input().split()))
 if n == 1:
     print(k)
 elif k == 1:
