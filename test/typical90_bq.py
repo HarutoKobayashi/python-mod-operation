@@ -1,10 +1,13 @@
+# 例 (https://atcoder.jp/contests/typical90/tasks/typical90_bq)
+
+## main.py ##
 # MAXは登場しえる最大の数。これが 10e+7 だと時間ギリギリ（1700ms, 539MB）という感覚。
 # 最初にここを修正すること
 MAX = 10**7
-MOD = 998244353
+MOD = 10**9 + 7
 
 # 割り算・階乗を計算するかどうか。Trueの場合、事前にMAX回を計算する。Falseの場合、前処理を行わない。
-cal_div = True
+cal_div = False
 
 if cal_div:
     # fac[i] には i! が格納されている
@@ -276,3 +279,15 @@ else:
                 if isinstance(other, ModInt)
                 else self.x != ModInt(other).x
             )
+
+
+n, k = map(int, input().split())
+if n == 1:
+    print(k)
+elif k == 1:
+    print(0)
+elif n == 2:
+    print(k * (k - 1))
+else:
+    k = ModInt(k)
+    print(k * (k - 1) * (k - 2) ** (n - 2))
