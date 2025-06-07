@@ -1,4 +1,5 @@
 # 例 (https://atcoder.jp/contests/typical90/tasks/typical90_bq)
+# 前処理を実施しないケース
 
 ## main.py ##
 # MAXは登場しえる最大の数。これが 10e+7 だと時間ギリギリ（1700ms, 539MB）という感覚。
